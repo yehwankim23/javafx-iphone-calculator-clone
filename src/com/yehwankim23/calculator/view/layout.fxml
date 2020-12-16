@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox styleClass="vbox" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.yehwankim23.calculator.controller.Controller">
+    <HBox styleClass="hbox-long">
+        <Label fx:id="label" styleClass="label" text="0"/>
+    </HBox>
+    <HBox styleClass="hbox">
+        <Button fx:id="button" onMouseClicked="#clickOnFunction" styleClass="button-function" text="AC"/>
+        <Button onMouseClicked="#clickOnFunction" styleClass="button-function" text="±"/>
+        <Button onMouseClicked="#clickOnFunction" styleClass="button-function" text="\%"/>
+        <Button onMouseClicked="#clickOnOperation" styleClass="button-operation" text="÷"/>
+    </HBox>
+    <HBox styleClass="hbox">
+        <Button onMouseClicked="#clickOnNumber" styleClass="button-number" text="7"/>
+        <Button onMouseClicked="#clickOnNumber" styleClass="button-number" text="8"/>
+        <Button onMouseClicked="#clickOnNumber" styleClass="button-number" text="9"/>
+        <Button onMouseClicked="#clickOnOperation" styleClass="button-operation" text="×"/>
+    </HBox>
+    <HBox styleClass="hbox">
+        <Button onMouseClicked="#clickOnNumber" styleClass="button-number" text="4"/>
+        <Button onMouseClicked="#clickOnNumber" styleClass="button-number" text="5"/>
+        <Button onMouseClicked="#clickOnNumber" styleClass="button-number" text="6"/>
+        <Button onMouseClicked="#clickOnOperation" styleClass="button-operation" text="–"/>
+    </HBox>
+    <HBox styleClass="hbox">
+        <Button onMouseClicked="#clickOnNumber" styleClass="button-number" text="1"/>
+        <Button onMouseClicked="#clickOnNumber" styleClass="button-number" text="2"/>
+        <Button onMouseClicked="#clickOnNumber" styleClass="button-number" text="3"/>
+        <Button onMouseClicked="#clickOnOperation" styleClass="button-operation" text="+"/>
+    </HBox>
+    <HBox styleClass="hbox">
+        <Button onMouseClicked="#clickOnNumber" styleClass="button-number-long" text="0           "/>
+        <Button onMouseClicked="#clickOnNumber" styleClass="button-number" text="."/>
+        <Button onMouseClicked="#clickOnOperation" styleClass="button-equal" text="="/>
+    </HBox>
+</VBox>
