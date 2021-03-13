@@ -11,9 +11,10 @@ public class Controller {
     private final String ZERO = "0";
 
     private String answer = ZERO;
-    private char operation = '+';
+    private char operation = ' ';
     private String input = ZERO;
 
+    private boolean isOperationInitialized = false;
     private boolean isInputDecimal = false;
     private boolean isAnswerDisplayed = false;
     private boolean isOperationFocused = false;
@@ -34,7 +35,8 @@ public class Controller {
             case 'A':
             case 'C':
                 answer = ZERO;
-                operation = '+';
+                operation = ' ';
+                isOperationInitialized = false;
                 resetInput();
                 isOperationFocused = false;
                 isNumberClicked = false;
@@ -81,10 +83,13 @@ public class Controller {
         char thisOperation = ((Button) mouseEvent.getSource()).getText().charAt(0);
 
         if (thisOperation == '=') {
-            answer = MODEL.calculate(answer, operation, input);
+            if (isOperationInitialized) {
+                answer = MODEL.calculate(answer, operation, input);
+                label.setText(answer);
+            }
+
             isOperationFocused = false;
             isNumberClicked = false;
-            label.setText(answer);
             isAnswerDisplayed = true;
         } else {
             if (!isOperationFocused) {
@@ -103,6 +108,7 @@ public class Controller {
             }
 
             operation = thisOperation;
+            isOperationInitialized = true;
             isOperationFocused = true;
             isNumberClicked = false;
         }
