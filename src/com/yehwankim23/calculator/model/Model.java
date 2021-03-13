@@ -28,6 +28,10 @@ public class Model {
                 throw new UnsupportedOperationException("Model.calculate().switch().default");
         }
 
+        if (answerAsDouble % 1 == 0) {
+            return Integer.toString((int) answerAsDouble);
+        }
+
         return Double.toString(answerAsDouble);
     }
 }
