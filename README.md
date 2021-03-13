@@ -1,5 +1,4 @@
 # iPhone Calculator for Desktop
-2020
 
 ### [Download](https://github.com/yehwankim23/javafx-iphone-calculator-clone/releases/download/v1.0.0/iphone_calculator_1.0.0.jar)
 
